@@ -41,4 +41,25 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+                <outputDirectory>${basedir}</outputDirectory>
+                <finalName>server</finalName>
+                <appendAssemblyId>false</appendAssemblyId>
+                <archive>
+                    <manifest>
+                        <mainClass>Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
+
 </project>
